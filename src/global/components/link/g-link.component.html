@@ -1,0 +1,4 @@
+
+<a *ngIf="isRouterLink" routerLink="{{routerLink}}" [ngClass]="klass" gsTestClass="anchor"> {{label}} </a>
+
+<a *ngIf="!isRouterLink" (click)="goToSpecificUrl($event)" href="javascript:void(0)" [ngClass]="klass" gsTestClass="anchor"> {{label}} </a>

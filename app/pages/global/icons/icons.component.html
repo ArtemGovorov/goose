@@ -1,0 +1,119 @@
+<div id="goose-icons" class="g-alpha">
+
+    <h1 id="icons" class="g-heading">Icons</h1>
+    <p class="lead">Goose comes with a pre defined set of icons which can be easily used across any application.</p>
+
+    <!-- basic icon -->
+    <section>
+        <h2 class="g-heading">Icon List</h2>
+        <p>To create an icon, simply use the <code>gs-icon</code> component.</p>
+        <a class="g-btn" href="http://goose-icons.s3-eu-west-1.amazonaws.com/latest/docs/index.html">Browse the Full Icon List...</a>
+    </section>
+
+    <!-- basic icon -->
+    <section>
+        <h2 class="g-heading">Basic Icon</h2>
+
+        <p>To create an icon, simply use the <code>iconName="bell"</code> component input.</p>
+        <p>To create an icon, simply use the .g-icon and .g-icon-* class to any element.</p>
+
+        <gp-example-code>
+            <gs-icon iconName="bell">&#164;</gs-icon>
+        </gp-example-code>
+        <gp-code-highlight></gp-code-highlight>
+    </section>
+
+    <!-- Primary Icon -->
+    <section>
+        <h2 class="g-heading">Primary Icon</h2>
+
+        <p>You can have an icon display with the primary brand colour by configurating the <code>iconStatus="primary"</code> component input.</p>
+
+        <gp-example-code>
+            <gs-icon iconName="bell" iconClass="g-icon--primary"></gs-icon>
+        </gp-example-code>
+        <gp-code-highlight></gp-code-highlight>
+
+    </section>
+
+    <!-- notification indicator -->
+    <section>
+        <h2 class="g-heading">Notification Indicator</h2>
+
+        <p>Icons can be used to display notifications by displaying a small red indicator at the top right hand corner of the icon.
+        </p>
+        <p>To apply a notification indicator to an icon, simply add the <code>iconStatus="alert"</code> component input.</p>
+
+        <gp-example-code>
+            <gs-icon iconName="bell" iconStatus="alert"></gs-icon>
+        </gp-example-code>
+
+        <gp-code-highlight></gp-code-highlight>
+    </section>
+
+    <!-- Extra Icon -->
+    <section>
+        <h2 class="g-heading">Extra classes Icon</h2>
+
+        <p>You can have an icon that has multyple extra classes configurate it with <code>iconClass="g-icon--primary g-icon--alert"</code> component input.</p>
+
+        <gp-example-code>
+            <gs-icon iconName="bell" iconClass="g-icon--primary g-icon--alert"></gs-icon>
+        </gp-example-code>
+        <gp-code-highlight></gp-code-highlight>
+
+    </section>
+
+    <!-- icon sizes -->
+    <section>
+        <h2 class="g-heading">Icon Sizes</h2>
+        <p>If you require icons to be either bigger or smaller, config the component input <code>iconSize</code>.</p>
+        <p>Default size will be <code>medium</code>.</p>
+
+        <gp-example-code>
+            <gs-icon iconName="bell" iconSize="tiny"></gs-icon>
+            <gs-icon iconName="bell" iconSize="small"></gs-icon>
+            <gs-icon iconName="bell" iconSize="medium"></gs-icon>
+            <gs-icon iconName="bell" iconSize="large"></gs-icon>
+            <gs-icon iconName="bell" iconSize="big"></gs-icon>
+            <gs-icon iconName="bell" iconSize="huge"></gs-icon>
+            <gs-icon iconName="bell" iconSize="massive"></gs-icon>
+        </gp-example-code>
+        <gp-code-highlight></gp-code-highlight>
+    </section>
+
+    <gp-example-parameters tag="<gs-icon>" [params]="params">
+        <tr>
+            <td>
+                <code> iconName </code>
+            </td>
+            <td>
+                <p>Use this to set the name of the icon.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code> iconSize </code>
+            </td>
+            <td>
+                <p>Use this to set icon size.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code> iconStatus </code>
+            </td>
+            <td>
+                <p>Use this to set icon status.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code> iconClass </code>
+            </td>
+            <td>
+                <p>Use this to set additional classes for the icon.</p>
+            </td>
+        </tr>
+    </gp-example-parameters>
+</div>

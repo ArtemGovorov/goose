@@ -1,0 +1,169 @@
+<div id="goose-utility" class="g-alpha">
+
+    <h1 class="g-heading">Utility</h1>
+
+    <!-- Utility Slider -->
+    <section>
+        <h2 class="g-heading">Utility Slider</h2>
+        <p>How to use the utility slider</p>
+
+        <gp-example-code class="g-example-accordion">
+            <div class="g-container">
+                <div class="triggers">
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <div class="g-header__primarynav">
+                                <gs-utility-trigger utilitySliderId="example" triggerOpenIcon="export-2" triggerCloseIcon="import-2" triggerIconSize="big"></gs-utility-trigger>
+                            </div>
+                        </div>
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-1">
+                            <div class="g-header__primarynav">
+                                <gs-utility-trigger utilitySliderId="select" triggerOpenIcon="chevron-down" triggerCloseIcon="chevron-up" triggerIconSize="big"></gs-utility-trigger>
+                            </div>
+                        </div>
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-2">
+                            <div class="g-header__secondarynav g-utility-trigger">
+                                <gs-utility-trigger utilitySliderId="notifications" triggerIcon="bell" triggerIconSize="big" triggerIconStatus="alert"></gs-utility-trigger>
+                                <gs-utility-trigger utilitySliderId="history" triggerIcon="history" triggerIconSize="big"></gs-utility-trigger>
+                                <gs-utility-trigger utilitySliderId="search" triggerIcon="search" triggerIconSize="big"></gs-utility-trigger>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="g-example-sliders">
+                    <gs-utility-slider utilitySliderId="example" [sliderHasPin]="true" [closeOnOutsideClick]="true">
+                        <h3>Slider</h3>
+                    </gs-utility-slider>
+                    <gs-utility-slider utilitySliderId="select" sliderPosition="down" sliderClass="g-example__select_slider">
+                        <h3>Select</h3>
+                    </gs-utility-slider>
+                    <gs-utility-slider utilitySliderId="notifications" sliderGroup="extraInfo" sliderPosition="right" sliderSize="small">
+                        <h3>Notifications</h3>
+                        This is a utility slider with a small size.
+                    </gs-utility-slider>
+                    <gs-utility-slider utilitySliderId="history" sliderGroup="extraInfo" sliderPosition="right" sliderSize="medium" [sliderHasPin]="true">
+                        <h3>History</h3>
+                        This is a utility slider with a medium size.
+                    </gs-utility-slider>
+                    <gs-utility-slider utilitySliderId="search" sliderGroup="extraInfo" sliderPosition="right" sliderSize="large">
+                        <h3>Search</h3>
+                        This is a utility slider with a large size.
+                    </gs-utility-slider>
+                    <gs-utility-slider utilitySliderId="chat" sliderPosition="up">
+                        <h3>Chat</h3>
+                    </gs-utility-slider>
+                </div>
+                <div class="triggers">
+                    <div class="row">
+                        <div class="col-sm-10"></div>
+                        <div class="col-sm-2">
+                            <div class="g-header__secondarynav g-utility-trigger">
+                                <gs-utility-trigger utilitySliderId="chat" triggerOpenIcon="ascending-2" triggerCloseIcon="descending-2"  triggerIconSize="big"></gs-utility-trigger>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </gp-example-code>
+
+        <gp-code-highlight></gp-code-highlight>
+
+    </section>
+
+    <section>
+        <span class="toggle-code g-icon g-icon-code"></span>
+        <h2 class="g-heading">Utility Header</h2>
+        <p> Shown below is a default utility header component.</p>
+        <p> This component can be easily included by using <code>&lt;gs-utility-header&gt;</code> within a <code>&lt;gs-utility-slider&gt;</code> component.</p>
+
+        <gp-example-code class="g-example-utility">
+            <div class="g-utility">
+                <gs-utility-header utilitySliderId="headerExample" closeIcon="cross">
+                    <h2 class="g-heading">Utility Header</h2>
+                </gs-utility-header>
+            </div>
+        </gp-example-code>
+        <gp-code-highlight></gp-code-highlight>
+    </section>
+
+    <section>
+        <span class="toggle-code g-icon g-icon-code"></span>
+        <h2 class="g-heading">Utility Function</h2>
+        <p> Shown below is a default utility divider component.</p>
+        <p> This component can be easily included by using <code>&lt;gs-utility-function&gt;</code> within a <code>&lt;gs-utility-slider&gt;</code> component.</p>
+
+        <gp-example-code class="g-example-utility">
+            <div class="g-utility">
+                <gs-utility-function></gs-utility-function>
+            </div>
+        </gp-example-code>
+        <gp-code-highlight></gp-code-highlight>
+    </section>
+
+    <section>
+        <span class="toggle-code g-icon g-icon-code"></span>
+        <h2 class="g-heading">Utility Content</h2>
+        <p> Shown below is a the markup for the content within the utility component.</p>
+        <p> This component can be easily included by using <code>&lt;gs-utility-content&gt;</code> within a <code>&lt;gs-utility-slider&gt;</code> component.</p>
+
+        <gp-example-code class="g-example-utility">
+            <div class="g-utility">
+                <gs-utility-content>
+                    <gs-utility-content-divider></gs-utility-content-divider>
+                    <gs-utility-content-results></gs-utility-content-results>
+                </gs-utility-content>
+            </div>
+        </gp-example-code>
+        <gp-code-highlight></gp-code-highlight>
+    </section>
+
+    <section>
+        <span class="toggle-code g-icon g-icon-code"></span>
+        <h2 class="g-heading">Utility Footer</h2>
+        <p> Shown below is a the markup for the footer within the utility component.</p>
+        <p> This component can be easily included by using <code>&lt;gs-utility-footer&gt;</code> within a <code>&lt;gs-utility-slider&gt;</code> component.</p>
+        
+        <gp-example-code class="g-example-utility">
+            <div class="g-utility">
+                <gs-utility-footer>
+                    <span value="Next">Next</span>
+                    <span value="Next">Back</span>
+                </gs-utility-footer>
+            </div>
+        </gp-example-code>
+        <gp-code-highlight></gp-code-highlight>
+    </section>
+
+    <section>
+        <span class="toggle-code g-icon g-icon-code"></span>
+        <h2 class="g-heading">Full Utility Components</h2>
+        <p> Shown below is the markup for the complete utility slider components.</p>
+        
+        <gp-example-code class="g-example-utility">
+            <div class="g-utility">
+                <gs-utility-header utilitySliderId="headerExample" closeIcon="cross">
+                    <h2 class="g-heading">Utility Header</h2>
+                </gs-utility-header>
+                <gs-utility-function></gs-utility-function>
+                <gs-utility-content>
+                    <gs-utility-content-divider></gs-utility-content-divider>
+                    <gs-utility-content-results></gs-utility-content-results>
+                </gs-utility-content>
+                <gs-utility-footer>
+                    <span value="Next">Next</span>
+                    <span value="Next">Back</span>
+                </gs-utility-footer>
+            </div>
+        </gp-example-code>
+        <gp-code-highlight></gp-code-highlight>
+    </section>
+
+    <gp-example-parameters tag="<gs-utility-slider>" [params]="sliderParams"></gp-example-parameters>
+    <gp-example-parameters tag="<gs-utility-trigger>" [params]="triggerParams"></gp-example-parameters>
+    <gp-example-parameters tag="<gs-utility-pin>" [params]="pinParams"></gp-example-parameters>
+    <gp-example-parameters tag="<gs-utility-header>" [params]="headerParams"></gp-example-parameters>
+    <gp-example-parameters tag="<gs-utility-function>" [params]="functionParams"></gp-example-parameters>
+</div>

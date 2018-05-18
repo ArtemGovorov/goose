@@ -1,0 +1,7 @@
+{
+
+    "elements": [
+        { "name": "avatar", "friendlyName": "Avatars", "component": "AvatarComponent", "status": 2, "hide": false }
+    ]
+
+} 

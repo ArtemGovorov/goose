@@ -1,0 +1,5 @@
+<div [ngClass]="wrapClasses">
+    <gs-icon *ngIf="!!triggerIcon" (click)="onClick()" [iconName]="triggerIcon" [iconSize]="triggerIconSize" [iconStatus]="triggerIconStatus" [iconClass]="iconClasses"></gs-icon>
+    <gs-icon *ngIf="!!triggerCloseIcon" (click)="onClick()" [iconName]="triggerCloseIcon" [iconSize]="triggerIconSize" [iconStatus]="triggerIconStatus" [iconClass]="iconClasses"></gs-icon>
+    <ng-content></ng-content>
+</div>

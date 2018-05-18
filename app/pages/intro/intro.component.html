@@ -1,0 +1,75 @@
+<div>
+
+    <h1 class="g-heading">Overview</h1>
+    <p class="lead">Get the lowdown on the key pieces of Goose's infrastructure, including our approach to better, faster, stronger web development.</p>
+
+    <!-- Doctype -->
+    <section>
+        <span class="toggle-code g-icon g-icon-code"></span>
+        <h2 class="g-heading">HTML5 doctype</h2>
+        <p>Goose makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+
+        <gp-example-code>
+            <!-- <html lang="en"> </html> -->
+        </gp-example-code>
+
+        <gp-code-highlight></gp-code-highlight>
+
+
+    </section>
+
+    <!-- Goose Frame -->
+    <section>
+        <span class="toggle-code g-icon g-icon-code"></span>
+        <h2 class="g-heading">Goose Frame</h2>
+        <p>Using the goose frame will not affect any third party plug-ins, as it is fully encapsulated.</p>
+        <p>To implement this all you would need to is add the <code>g-html</code> and <code>g-body</code> tags.</p>
+
+        <gp-example-code>
+            <!-- <html class="g-html" lang="en"><body class="g-body"> </body> </html> -->
+        </gp-example-code>
+
+        <gp-code-highlight></gp-code-highlight>
+    </section>
+
+    <!-- Disable Zooming -->
+    <section>
+        <span class="toggle-code g-icon g-icon-code"></span>
+        <h2 class="g-heading">Disable Zooming</h2>
+        <p>You can disable zooming capabilities on mobile devices by adding <code>user-scalable=no</code> to the viewport meta tag. This disables zooming, meaning users are only able to scroll, and results in your site feeling a bit more like a native application.
+            Overall, we don't recommend this on every site, so use caution!</p>
+
+        <gp-example-code>
+            <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+        </gp-example-code>
+
+        <gp-code-highlight></gp-code-highlight>
+    </section>
+
+    <!-- Containers -->
+    <section>
+        <span class="toggle-code g-icon g-icon-code"></span>
+        <h2 class="g-heading">Containers</h2>
+        <p>Goose requires a containing element to wrap project contents and house our grid system. You may choose one of two containers to use in your projects. Note that, due to <code>padding</code> and more, neither container is nestable.</p>
+        <p>Use <code>.container</code> for a responsive fixed width container.</p>
+
+        <gp-example-code>
+            <div class="container">...</div>
+        </gp-example-code>
+
+        <gp-code-highlight></gp-code-highlight>
+    </section>
+
+    <!-- Fluid Containers -->
+    <section>
+        <span class="toggle-code g-icon g-icon-code"></span>
+        <h2 class="g-heading">Fluid Containers</h2>
+        <p>Use .container-fluid for a full width container, spanning the entire width of your viewport.</p>
+
+        <gp-example-code>
+            <div class="container-fluid">...</div>
+        </gp-example-code>
+
+        <gp-code-highlight></gp-code-highlight>
+    </section>
+</div>

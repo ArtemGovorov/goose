@@ -1,0 +1,309 @@
+//
+// Base Layout
+// --------------------------------------------------
+
+body {
+    &.g-docs-inital-load {
+        display: none; // we remove this class from the body on load to stop the theme flickering
+    }
+
+    .pace {
+        display: none; // hide pace loader from Goose
+    }
+}
+
+#style-guide-wrapper {
+   padding-bottom: 100px;
+}
+
+#header {
+    height: 70px;
+    color: #fff;
+
+    #current-page {
+        font-size: 30px;
+        line-height: 70px;
+        font-weight: 300;
+    }
+
+    .g-select {
+        float: right;
+        padding: 15px 5px;
+        .g-select{
+            float: none;
+            padding: 0;
+        }
+    }
+}
+
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #022535;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .text-white {
+        color: #fff;
+    }
+
+    .top-nav {
+        height: 70px;
+        float: left;
+
+        .logo {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .bottom-nav {
+        margin: 50px 0;
+        color: #fff;
+    }
+
+    .nav-theme-changer {
+        float: right;
+
+        &.g-select {
+            &.g-select--transparent {
+                .select2-container {
+                    .select2-selection--single {
+                        .select2-selection__rendered {
+                            color: #fff;
+                        }
+
+                        &:hover, &:focus {
+                            .select2-selection__rendered {
+                                color: #222E32;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    h3 {
+        padding-left: 5px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0 0 20px 0;
+        list-style: none;
+
+        ul {
+          padding: 0 0 0 20px;
+        }
+    }
+
+    ul > li {
+        padding: 0;
+        color: #fff;
+
+        &.hide {
+            display: none;
+        }
+    }
+    ul > li > span,
+    ul > li > a {
+        display: block;
+        color: #fff;
+        padding: 5px;
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -15px;
+            height: 29px;
+            z-index: -1;
+            transition: all .2s ease-in-out;
+        }
+
+        &:before {
+            width: 0;
+            z-index: -1;
+            background: #f05133;
+        }
+
+        &:after {
+            width: 100%;
+            padding: 0 15px;
+            background: #022535;
+            box-sizing: content-box;
+        }
+
+        &:hover {
+            &:after {
+                background: fade(#f05133, 50%);
+            }
+        }
+
+        &.nav__item--active {
+            &:before {
+                width: 8px;
+            }
+
+            &:after {
+                background: fade(#f05133, 50%);
+            }
+        }
+    }
+}
+
+.hide {
+    display: none;
+}
+
+//
+// Icons
+// --------------------------------------------------
+
+#icons-holder {
+    margin-top: 15px;
+
+    .icon-container {
+        text-align: center;
+        padding: 30px 0;
+        border-left: 10px solid #fff;
+        border-bottom: 10px solid #fff;
+        color: #333;
+        opacity: 0.8;
+        cursor: pointer;
+        background: #f6f6f6;
+        position: relative;
+
+        .clipboard {
+            opacity: 0;
+
+            &::before {
+                right: 0 !important;
+            }
+        }
+
+        &:hover .clipboard {
+            opacity: 1;
+        }
+    }
+
+    .g-icon, .k-icon {
+        font-size: 30px;
+    }
+
+    .icon-desc {
+        padding-top: 15px;
+        font-size: 18px;
+        font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    }
+
+    .copy-clip:hover,
+    .zeroclipboard-is-hover {
+        opacity: 1;
+        background: #efefef;
+    }
+}
+
+.icons-search {
+    margin-left: 10px;
+    width: 100%;
+}
+
+.g-footer {
+    min-height: 100px;
+}
+
+//
+//  Release Version Tags
+// --------------------------------------------------
+
+#nav {
+
+    ul {
+        li {
+            position: relative;
+        }
+
+        li:hover::after {
+            position: absolute;
+            right: 0;
+            top: 5px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .g-dev:hover::after {
+            content: 'In Progress';
+        }
+
+        .g-alpha:hover::after {
+            content: 'alpha';
+        }
+
+        .g-beta:hover::after {
+            content: 'beta';
+        }
+
+        .g-released:hover::after {
+            content: 'released';
+        }
+    }
+}
+
+#style-guide-content {
+
+    .g-dev > h1.g-heading::after,
+    .g-alpha > h1.g-heading::after,
+    .g-beta > h1.g-heading::after,
+    .g-released > h1.g-heading::after {
+        font-size: 12px;
+        color: #fff;
+        padding: 4px 10px;
+        border-radius: 4px;
+        background: #666;
+        text-transform: uppercase;
+        margin-left: 15px;
+        vertical-align: text-bottom;
+    }
+
+    .g-dev {
+        > h1.g-heading::after {
+            content: 'In Progress';
+            background: #FF8400;
+        }
+    }
+
+    .g-alpha {
+        > h1.g-heading::after {
+            content: 'alpha';
+            background: #f22929;
+        }
+    }
+
+    .g-beta {
+        > h1.g-heading::after {
+            content: 'beta';
+            background: #6e99d4;
+        }
+    }
+
+    .g-released {
+        > h1.g-heading::after {
+            content: 'released';
+            background: #54c600;
+        }
+    }
+}
+
+#goose-workflow-timeline {
+    .g-workflow-timeline {
+      padding-top: 30px;
+    }
+}

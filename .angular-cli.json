@@ -1,0 +1,81 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "Goose"
+  },
+  "apps": [
+    {
+      "name": "debug",
+      "assets": [
+        {
+          "glob": "**/*",
+          "input": "./themes/**/assets",
+          "output": "./themes/**/assets"
+        },
+        {
+          "glob": "**/*",
+          "input": "./themes/**/bundle",
+          "output": "./themes/**/bundle"
+        },
+        {
+          "glob": "**/*.json",
+          "input": "./app",
+          "output": "./data"
+        },
+        {
+          "glob": "**/*.json",
+          "input": "./assets/i18n/",
+          "output": "./assets/i18n/"
+        },
+        {
+          "glob": "themes.json",
+          "input": "./",
+          "output": "./"
+        }
+      ],
+      "root": "./",
+      "outDir": "dist",
+      "index": "index.html",
+      "main": "./app/index.ts",
+      "test": "./app/index.spec.js",
+      "tsconfig": "./tsconfig.json",
+      "testTsconfig": "./tsconfig.spec.json",
+      "prefix": "gs",
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      },
+      "styles": [
+        "themes/default/bundle/goose-default.ng.min.css",
+        "app/index.less"
+      ]
+    }
+  ],
+  "lint": [
+    {
+      "project": "tsconfig.json",
+      "tslintConfig": "tslint.json",
+      "exclude": [
+        "**/node_modules/**",
+        "**/*.spec.ts",
+        "**/rxjs-imports.ts"
+      ]
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./test/karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "less",
+    "component": {},
+    "build": {
+      "sourcemaps": true
+    },
+    "serve": {
+      "port": 9000
+    }
+  }
+}

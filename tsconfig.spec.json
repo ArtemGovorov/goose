@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "removeComments": false,
+    "noImplicitAny": false,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "node",
+      "jasmine",
+      "es6-shim"
+    ]
+  },
+  "compileOnSave": false,
+  "filesGlob": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "!node_modules/**",
+    "!npm/**"
+  ],
+  "exclude": [
+    "npm-aot-check.ts",
+    "node_modules",
+    "e2e"
+  ]
+}

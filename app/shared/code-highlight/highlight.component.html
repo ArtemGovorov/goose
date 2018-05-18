@@ -1,0 +1,8 @@
+<span class="toggle-code g-icon g-icon-code" [class.active]="isOpen" (click)="toggleOpen($event)"></span>
+<div class="highlight" [ngClass]="{'hightlight-visible': isOpen}">
+  <pre class="highlightjs" #gpHighlight>
+        <code class="language-markup html" [ngClass]="language">
+          <ng-content></ng-content>
+        </code>
+      </pre>
+</div>

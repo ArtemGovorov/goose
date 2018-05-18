@@ -1,0 +1,995 @@
+/*
+Element Example Layouts
+--------------------------------------------------
+*/
+/* Hiding Javascript Witin HTML */
+.g-example-javascript {
+    display: none;
+}
+/* Textarea with button */
+.g-example-textarea {
+    .g-textarea {
+        &.g-textarea--expand {
+            position: relative;
+        }
+    }
+}
+/* Inputs */
+#goose-datepicker,
+#goose-inputs,
+#goose-stepper,
+#goose-textareas,
+#goose-timepicker,
+#goose-selects {
+    .g-example > * {
+        display: block;
+        margin-top: 15px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &.g-input__search-by {
+            display: flex;
+        }
+    }
+}
+
+.g-example-postition-relative {
+    position: relative !important;
+    bottom: initial !important;
+    top: initial !important;
+    left: initial !important;
+    right: initial !important;
+}
+
+.g-nav-main {
+    .g-select {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+
+        .g-text--large {
+            padding-top: 10px;
+        }
+    }
+}
+
+.g-example-inline {
+    .g-inline {
+        margin: 0 0 10px;
+        display: table;
+    }
+}
+
+.g-example-record {
+    background: #E7EAEC;
+    width: 100%;
+    float: left;
+    clear: both;
+    margin: 0 0 10px;
+    padding: 15px;
+
+    .g-example {
+        background: none !important;
+        margin: 30px 0 0;
+        padding: 0;
+
+        &::after {
+            top: -30px;
+        }
+    }
+}
+/* Containers */
+.g-example-container {
+    background: #E7EAEC;
+    width: 100%;
+    float: left;
+    clear: both;
+    margin: 0 0 10px;
+    padding: 15px;
+
+    &.g-example-container--inverted {
+        background: #38474E;
+
+        .g-example {
+            &::after {
+                color: white !important;
+            }
+        }
+    }
+
+    .g-example {
+        background: none !important;
+        margin: 30px 0 0;
+        padding: 0;
+
+        &::after {
+            top: -30px;
+        }
+    }
+}
+
+&.g-example-container--dark {
+    .g-container__inner {
+        background: #38474E;
+    }
+}
+
+#goose-containers .g-example-container.g-example-container--dark {
+    .g-container__inner {
+        background: #38474E;
+    }
+    /* Make first loader container light */
+    .col-md-6:first-child .g-container .g-container__inner {
+        background: #fff;
+    }
+}
+/*Demonstrating container with no border*/
+.g-container--transparent {
+    background: #F3F4F5 !important;
+}
+
+#goose-containers .g-example .g-container .g-scroll {
+    max-height: 200px;
+    max-width: 100%;
+}
+
+.g-example-module-width {
+    width: 2000px;
+}
+
+.g-example-container &.g-example-container--width {
+    .g-container__module {
+        width: 2000px;
+    }
+}
+/*Avatars*/
+.g-example {
+    .g-avatar--profile {
+        margin-right: 10px;
+    }
+
+    .g-avatar-container {
+        margin-bottom: 20px;
+        display: block;
+    }
+}
+
+#navMenuLink {
+    .g-icon-cross {
+        display: none;
+    }
+
+    &.open {
+        .g-icon-hamburger {
+            display: none;
+        }
+
+        .g-icon-cross {
+            display: block;
+        }
+    }
+}
+/* Block Headers */
+.g-example-blockheader {
+    .g-blockheader {
+        margin: 0 0 15px;
+    }
+}
+/* Form Examples */
+.form-example {
+    overflow: auto;
+}
+
+.form-example .g-icon-cross {
+    display: none;
+}
+
+.form-example.open .g-icon-bell {
+    display: none;
+}
+
+.form-example.open .g-icon-cross {
+    display: block;
+}
+
+.g-example--record > div {
+    height: 1200px;
+    width: 100%;
+}
+/* ------------------------------------------------------ */
+/* Grids */
+/* ------------------------------------------------------ */
+.g-exmaple-grids-table {
+    th {
+        text-align: center;
+
+        small {
+            display: block;
+        }
+    }
+}
+/* ------------------------------------------------------ */
+/* Responsive Utilites */
+/* ------------------------------------------------------ */
+.g-example-utilities {
+    table {
+        th {
+            text-align: center;
+
+            small {
+                display: block;
+            }
+        }
+
+        tr {
+            td {
+                border: 1px solid #fff;
+
+                &.is-hidden {
+                    background: #F3F4F5;
+                    color: #A2AEB4;
+                }
+
+                &.is-visible {
+                    background: #D0D6DA;
+                    font-weight: 600;
+                    color: #627279;
+                }
+            }
+        }
+    }
+}
+
+.g-example-utilities-test {
+    .hidden-md,
+    .hidden-sm,
+    .hidden-xs {
+        background-color: #fff;
+        color: #A2AEB4;
+        border: 1px solid #B8C2C7;
+    }
+
+    .visible-lg-block,
+    .visible-md-block,
+    .visible-sm-block,
+    .visible-xs-block {
+        background-color: #D0D6DA !important;
+        color: #627279 !important;
+        border: 1px solid #B8C2C7 !important;
+    }
+
+    .clearfix.visible-xs-block {
+        background-color: transparent !important;
+        border: none !important;
+    }
+}
+/* ------------------------------------------------------ */
+/* Goose Container */
+/* ------------------------------------------------------ */
+.g-docs-container {
+    margin-top: 0 !important;
+
+    > .g-container__inner {
+        overflow: auto;
+    }
+}
+
+/* ------------------------------------------------------ */
+/* Accordion Toggle list                                  */
+/* ------------------------------------------------------ */
+.g-example--accordion-toggle {
+    .g-accordion {
+        .g-utility {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            position: relative;
+            top: 0;
+            right: 0;
+            box-shadow: none;
+        }
+    }
+}
+/* ------------------------------------------------------ */
+/* Palettes */
+/* ------------------------------------------------------ */
+#goose-palettes {
+    .palette-container {
+        margin-top: 20px;
+        margin-bottom: 30px;
+
+        .g-palette-example {
+            height: 127px;
+            margin-top: 10px;
+        }
+
+        .palette-values {
+            padding-top: 10px;
+        }
+
+        .clipboard {
+            top: -1px;
+            opacity: 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .clipboard {
+                opacity: 1;
+            }
+        }
+    }
+}
+/* ------------------------------------------------------ */
+/* Status Labels */
+/* ------------------------------------------------------ */
+.g-status-example--sizes {
+    .g-status {
+        width: auto;
+        margin: 0 0 10px;
+        display: table;
+    }
+}
+/* ------------------------------------------------------ */
+/* Truncate */
+/* ------------------------------------------------------ */
+.g-example--truncate {
+    max-width: 150px;
+}
+/* ------------------------------------------------------ */
+/* Header */
+/* ------------------------------------------------------ */
+.g-example-header {
+    .container {
+        width: 100%;
+    }
+
+    .g-header {
+        position: relative !important;
+        top: 0;
+        z-index: 0;
+    }
+
+    .pace {
+        .pace-progress {
+            width: 75% !important;
+            left: -75% !important;
+        }
+    }
+}
+
+.g-example-subheading {
+    .container {
+        width: 100%;
+    }
+
+    .g-subheading {
+        top: 0;
+        position: relative !important;
+        z-index: 0;
+
+        .g-subheading__container {
+            position: relative;
+            padding-top: 0;
+        }
+    }
+}
+/* ------------------------------------------------------ */
+/* Action Bar */
+/* ------------------------------------------------------ */
+.g-example-action-bar {
+    .container {
+        width: 100%;
+    }
+
+    .g-action-bar {
+        top: 0;
+        position: relative !important;
+        z-index: 0;
+
+        .g-action-bar__container {
+            position: relative;
+            padding-top: 0;
+        }
+    }
+}
+/* ------------------------------------------------------ */
+/* Navigation */
+/* ------------------------------------------------------ */
+.nav-theme-changer {
+    padding: 15px 0;
+
+    label {
+        margin: 0 0 5px;
+    }
+}
+
+.nav-element-search {
+    padding: 30px 0;
+    border-bottom: 1px solid #38474E;
+}
+
+.g-example--navigation {
+    width: 350px;
+    position: relative;
+}
+
+.g-example--navigation-module {
+    width: 350px;
+    position: relative;
+
+    .g-nav {
+        height: auto;
+
+        .g-nav-main {
+            height: auto !important;
+
+            .g-hierarchical {
+                .g-hierarchical__slide {
+                    position: relative;
+                }
+            }
+        }
+
+        .g-nav-footer {
+            position: relative;
+        }
+    }
+
+    .g-utility-pin {
+        cursor: pointer;
+
+        .g-utility-pin__pinned {
+            display: none;
+        }
+
+        &.g-utility-pin--pinned {
+            .g-utility-pin__pin {
+                display: none;
+            }
+
+            .g-utility-pin__pinned {
+                display: block;
+            }
+        }
+    }
+}
+/* ------------------------------------------------------ */
+/* Notifications */
+/* ------------------------------------------------------ */
+.g-example--notifi {
+    width: 400px;
+}
+
+.g-example--notifi-module {
+    background-color: #eee !important;
+    width: 420px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+
+    &::after {
+        left: 10px !important;
+    }
+
+    .g-notifi {
+        background: #fff;
+        width: 400px;
+    }
+
+    .g-notifi .g-notifi-feed {
+        position: relative;
+        top: 0;
+    }
+}
+/* ------------------------------------------------------ */
+/* Hierarchical List */
+/* ------------------------------------------------------ */
+.g-example-hierarchical-list {
+    width: 400px;
+    height: 400px;
+}
+/* ------------------------------------------------------ */
+/* Conversations  */
+/* ------------------------------------------------------ */
+.g-conversation-example {
+    background-color: #eee !important;
+    width: 470px !important;
+    padding: 45px 10px 15px !important;
+
+    &::after {
+        left: 10px !important;
+    }
+
+    .g-conversation {
+        .g-conversation__msg-input {
+            position: relative;
+        }
+
+        .g-conversation__buttons {
+            width: 100%;
+            position: relative;
+        }
+    }
+}
+
+/* ------------------------------------------------------ */
+/* Buttons  */
+/* ------------------------------------------------------ */
+.g-example-action-loading-buttons {
+    background: #E7EAEC;
+    padding: 20px;
+}
+
+/* ------------------------------------------------------ */
+/* Tabs */
+/* ------------------------------------------------------ */
+.g-example-tabs {
+    // .g-tabs-content {
+    //     margin-top: 20px;
+    // }
+}
+
+.g-example-counter-tabs {
+    background: #E7EAEC !important;
+    width: 100%;
+    padding: 40px 15px 15px !important;
+
+    &::after {
+        left: 15px !important;
+    }
+
+    &.g-example-vertical-tabs {
+        max-width: 121px !important;
+    }
+}
+/* ------------------------------------------------------ */
+/* Page Activity Notifications */
+/* ------------------------------------------------------ */
+.g-example-activity {
+    .g-activity {
+        display: inline-block;
+        float: none;
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        z-index: 10;
+    }
+}
+/* ------------------------------------------------------ */
+/* Positioner Elements */
+/* ------------------------------------------------------ */
+.g-example-hovercard,
+.g-example-popover,
+.g-example-tooltip {
+    > .g-positioner-trigger {
+        margin-right: 30px;
+    }
+}
+/* ------------------------------------------------------ */
+/* Utility */
+/* ------------------------------------------------------ */
+div.g-example-utility {
+    background-color: #eee !important;
+    width: 470px !important;
+    padding: 45px 10px 15px !important;
+
+    .g-utility {
+        position: relative!important;
+        padding-top: 0 !important;
+        top: 0;
+        right: 0;
+
+        .g-utility__content {
+            position: relative;
+            top: 0!important;
+            height: 400px!important;
+
+            .g-utility__content__results {
+                height: 400px;
+            }
+        }
+
+        .g-utility__buttons {
+            width: 100%;
+            position: relative;
+            height: 77px;
+        }
+    }
+}
+/* ------------------------------------------------------ */
+/* Utility Panel */
+/* ------------------------------------------------------ */
+.g-example-utility-panel {
+    background-color: #eee !important;
+    width: 470px !important;
+    padding: 45px 10px 15px !important;
+
+    &::after {
+        left: 10px !important;
+    }
+
+    .g-utility-panel-controls {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .g-utility-panel {
+        display: block;
+        height: auto;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        .g-utility-panel-content {
+            min-height: 300px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .g-utility-panel-footer {
+            position: relative;
+            top: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+/* ------------------------------------------------------ */
+/* Dimmers */
+/* ------------------------------------------------------ */
+.g-example--dimmer {
+    .g-container__inner {
+        min-height: 300px;
+    }
+}
+/* ------------------------------------------------------ */
+/* Favicons */
+/* ------------------------------------------------------ */
+.g-example-favicon xmp {
+    color: #C7254E;
+}
+/* ------------------------------------------------------ */
+/* Page Loaders */
+/* ------------------------------------------------------ */
+.g-example-loader {
+    .g-app-loader {
+        position: absolute!important;
+
+        &.g-app-loader--resize {
+            opacity: 1;
+
+            &::before {
+                animation-name: loader-icon;
+                animation-duration: 2.5s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+
+            &::after {
+                animation-name: loader-background;
+                animation-duration: 2.5s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            @keyframes loader-icon {
+                0% {
+                    font-size: 42px;
+                    opacity: 1;
+                }
+
+                100%,
+                50% {
+                    font-size: 11px;
+                    opacity: 0;
+                }
+            }
+            @keyframes loader-background {
+                0% {
+                    width: 88px;
+                    height: 88px;
+                    margin: -44px 0 0 -44px;
+                    opacity: 1;
+                }
+
+                100%,
+                50% {
+                    width: 20px;
+                    height: 20px;
+                    margin: -10px 0 0 -10px;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+/* ------------------------------------------------------ */
+/* Accordion */
+/* ------------------------------------------------------ */
+.g-example-accordion {
+    background-color: #e7eaec !important;
+    padding: 50px 15px 20px !important;
+
+    &::after {
+        left: 15px !important;
+    }
+
+    .g-accordion {
+        background-color: #fff;
+    }
+}
+
+.g-accordion--toggle-list {
+    max-width: 400px;
+}
+/* ------------------------------------------------------ */
+/* Recently Viewed */
+/* ------------------------------------------------------ */
+.g-recent-example {
+    width: 420px;
+    background-color: #eee !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+
+    &::after {
+        padding-left: 10px !important;
+    }
+
+    .g-recent__wrapper {
+        position: relative;
+        top: 0 !important;
+    }
+}
+/* ------------------------------------------------------ */
+/* Notifications */
+/* ------------------------------------------------------ */
+.g-notifi-example {
+    width: 420px;
+    background-color: #eee !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+
+    &::after {
+        padding-left: 10px !important;
+    }
+
+    .g-notifi {
+        background: #fff;
+    }
+    
+    .g-notifi-feed {
+        position: relative;
+        background: #fff;
+        top: 0 !important;
+    }
+}
+/* ------------------------------------------------------ */
+/* Risk Rating */
+/* ------------------------------------------------------ */
+.g-risk-example {
+    background-color: #eee !important;
+    width: auto;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    display: inline-block;
+
+    &::after {
+        padding-left: 10px !important;
+    }
+
+    &.g-risk-example--fluid {
+        width: 100%;
+    }
+}
+/* ------------------------------------------------------ */
+/* Angular Container */
+/* ------------------------------------------------------ */
+.g-ng-example-container {
+    background-color: #eee !important;
+    width: 100%;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    display: inline-block;
+
+    &::after {
+        padding-left: 10px !important;
+    }
+}
+/* ------------------------------------------------------ */
+/* Toolbar */
+/* ------------------------------------------------------ */
+.g-example-toolbar {
+    .container {
+        width: 100%;
+    }
+}
+/* ------------------------------------------------------ */
+/* Inline Edit */
+/* ------------------------------------------------------ */
+.g-example-inline {
+    .g-inline {
+        max-width: 600px;
+    }
+}
+/* ------------------------------------------------------ */
+/* Form Designer */
+/* ------------------------------------------------------ */
+.g-form-des {
+    .container {
+        width: 100%;
+
+        .g-form-des__stage {
+            min-height: 150px;
+        }
+    }
+}
+/* ------------------------------------------------------ */
+/* Processing */
+/* ------------------------------------------------------ */
+.g-processing-example {
+    width: 100%;
+    height: 400px;
+    position: relative;
+
+    &::after {
+        padding-left: 15px !important;
+        z-index: 2001;
+    }
+}
+
+.g-listselector-example {
+    .g-listselector-holder::before {
+        display: none;
+    }
+}
+/* New Ticker */
+.g-example {
+    .g-news-ticker {
+        padding: 0 120px 0 15px;
+
+        .g-news-ticker__controls {
+            right: 20px;
+        }
+    }
+}
+/* ------------------------------------------------------ */
+/* Colour picker */
+/* ------------------------------------------------------ */
+.g-example-colorpicker {
+    padding: 15px 15px 350px;
+}
+/* ------------------------------------------------------ */
+/* Field Bank */
+/* ------------------------------------------------------ */
+.g-fieldbank-example {
+    width: 465px;
+
+    .g-fieldbank {
+        .g-fieldbank-content {
+            min-height: 600px;
+            left: 114px;
+            position: relative !important;
+        }
+    }
+}
+/* ------------------------------------------------------ */
+/* Select */
+/* ------------------------------------------------------ */
+.g-example--select {
+    .g-select {
+        margin-bottom: 10px;
+    }
+}
+/* ------------------------------------------------------ */
+/* Workflow */
+/* ------------------------------------------------------ */
+.g-workflow {
+    .g-workflow__sidebar {
+        .g-workflow__summaries {
+            min-height: 300px;
+        }
+    }
+}
+/* ------------------------------------------------------ */
+/* Carousel viewer large example */
+/* ------------------------------------------------------ */
+
+.g-example {
+    .g-carousel {
+        .g-tabs--carousel {
+            position: relative;
+        }
+
+        .g-carousel__controls {
+            position: relative;
+        }
+
+        .g-carousel__collapse {
+            position: relative;
+        }
+
+        .g-carousel__doc-list {
+            height: calc(~"100vh - 252px");
+            width: 300px;
+        }
+    }
+}
+
+.g-example-carousel {
+    background-color: #e7eaec !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+
+    &::after {
+        padding-left: 10px;
+    }
+}
+
+.g-example-carousel--modal {
+    height: 240px;
+}
+
+.g-carousel-example-demo-area {
+    //box shadow needs to be applied when its a standalone element
+    .g-carousel__sidebar {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        bottom: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    }
+}
+
+.g-example {
+    .g-footer-actions {
+        width: 144px;
+        position: relative;
+        bottom: auto;
+        right: 0;
+
+        .g-footer-action {
+            height: 40px !important;
+        }
+    }
+}
+
+.g-loading--example {
+    .g-app-loader {
+        position: relative;
+    }
+
+    .pace {
+        &.pace-inactive {
+            display: block !important;
+        }
+
+        .pace-progress {
+            position: relative !important;
+            top: 0 !important;
+        }
+    }
+}
+
+.g-example--popover-fixed {
+    .g-example__container {
+        height: 200px;
+        background: #efefef;
+
+        .g-example__container__item {
+            padding: 40px 15px;
+
+            label {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+<div id="goose-pages-app">
+  <div style="margin-left: 400px">
+  </div>
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-sm-3 col-md-4 col-lg-2 hidden-xs g-scroll g-scroll--dark" id="nav">
+              <div class="row">
+                  <div class="col-md-7">
+                      <div class="top-nav" (click)="navMenu.getCurrentRoute()">
+                          <!-- <img class="logo" alt="Ideagen Logo" src="jquery/app/images/goose_logo.png" /> -->
+                      </div>
+                  </div>
+
+                  <div class="col-md-5">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="nav-element-search">
+                      </div>
+                  </div>
+              </div>
+              <gp-menu-nav #navMenu></gp-menu-nav>
+          </div>
+          <div class="col-sm-9 col-sm-offset-3 col-md-8 col-md-offset-4 col-lg-10 col-lg-offset-2">
+              <gp-header></gp-header>
+
+              <div class="row" id="style-guide-wrapper">
+                  <div class="col-md-10 col-md-offset-1">
+                      <div id="style-guide-content">
+                          <!-- Content loaded via JavaScript -->
+                          <router-outlet></router-outlet>
+                      </div>
+                  </div>
+              </div>
+
+
+          </div>
+      </div>
+  </div>
+</div>

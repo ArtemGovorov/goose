@@ -1,0 +1,24 @@
+<div class="nav-element-pages" *ngIf="routes.length">
+  <ng-container *ngFor="let route of routes">
+    <h3 *ngIf="!route.redirectTo" class="text-white g-example-pointer" (click)="route.open=!(route.open !== false)">
+      {{route?.data?.name}}
+      <gs-icon *ngIf="!!route.children" iconName="{{route.open !== false ? 'dash' : 'plus'}}" style="float:right;">-</gs-icon>
+    </h3>
+    <ul *ngIf="route.open !== false && !!route.children">
+      <li *ngFor="let child of route.children" class="g-{{child?.data?.status}}" [ngClass]="{'g-hide': child?.data?.hide === true}">
+        <a routerLink="/{{child.path}}/{{child.children ? child.children[0].path : ''}}" routerLinkActive="nav__item--active">{{child?.data?.name}}</a>
+        <ul *ngIf="!!child.children">
+          <li *ngFor="let granchild of child.children" class="g-{{granchild?.data?.status}}">
+            <a routerLink="/{{child.path}}/{{granchild.path}}" routerLinkActive="nav__item--active">{{granchild?.data?.name}}</a>
+          </li>
+        </ul> 
+      </li>
+    </ul>
+    <ul *ngIf="!route.children && !route.redirectTo">
+      <li class="g-{{route?.data?.status}}">
+        <a routerLink="/{{route.path}}" routerLinkActive="nav__item--active">{{route?.data?.name}}</a>
+      </li>
+    </ul>
+  </ng-container>
+</div>
+<span *ngIf="!routes.length" class="g-loader g-loader--light"></span>

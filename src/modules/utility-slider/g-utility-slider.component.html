@@ -1,0 +1,4 @@
+<div [ngClass]="currentClasses" (gsClickOutside)="checkClickOutside()" gsTestClass="slider">
+    <gs-utility-pin *ngIf="sliderHasPin && sliderGroup=='none'" [utilityPinId]="utilitySliderId"></gs-utility-pin>
+    <ng-content></ng-content>
+</div>

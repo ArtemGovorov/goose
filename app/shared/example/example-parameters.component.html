@@ -1,0 +1,35 @@
+<section>
+    <h3 *ngIf="!title">
+        Input Parameters for <code>{{tag}}</code>
+    </h3>
+    <p *ngIf="!subtitle"> List of available input parameters. </p>
+
+    <h3 *ngIf="title">
+        {{title}} <code *ngIf="tag">{{tag}}</code>
+    </h3>
+    <p *ngIf="subtitle"> {{subtitle}} </p>
+
+    <table class="g-table">
+        <thead>
+            <tr>
+                <th *ngIf="params && params[0].type">Type</th>
+                <th>Parameter</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="params">
+            <tr *ngFor="let param of params">
+                <td *ngIf="param.type">
+                    <code> {{param?.type}} </code>
+                </td>
+                <td>
+                    <strong> {{param.name}} </strong>
+                </td>
+                <td>
+                    <p>{{param.description}}</p>
+                </td>
+            </tr>
+        </tbody>
+        <ng-content></ng-content>
+    </table>
+</section>
