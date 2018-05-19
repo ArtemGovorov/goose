@@ -6,7 +6,7 @@ import { GUtilityHeaderComponent } from './g-utility-header.component';
 import { GUtils } from '../../global/services/g-utils';
 import { GUtilityService } from './g-utility.service';
 import { GError } from '../../global/services/g-error.service';
-import { MockGUtilityService } from './g-utility-slider.component.spec';
+import { MockGUtilityService } from './g-utility-spec.helper';
 
 describe('GUtilityHeaderComponent component   ', () => {
     let fixture: ComponentFixture<GUtilityHeaderComponent>;

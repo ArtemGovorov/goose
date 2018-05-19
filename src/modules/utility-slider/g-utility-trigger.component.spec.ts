@@ -9,7 +9,7 @@ import {
     IGUtilitySlider
 } from './g-utility.service';
 import { GError } from '../../global/services/g-error.service';
-import { MockGUtilityService } from './g-utility-slider.component.spec';
+import { MockGUtilityService } from './g-utility-spec.helper';
 
 describe('GUtilityTriggerComponent component   ', () => {
     let fixture: ComponentFixture<GUtilityTriggerComponent>;

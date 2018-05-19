@@ -10,22 +10,7 @@ import {
     IGUtilitySlider
 } from './g-utility.service';
 import { GError } from '../../global/services/g-error.service';
-
-export class MockGUtilityService extends GUtilityService {
-    mockSlider = {
-        id: 'test',
-        side: 'left',
-        status: 0
-    };
-
-    constructor() {
-        super();
-    }
-
-    setData(slider: any) {
-        this.subject.next(slider);
-    }
-}
+import { MockGUtilityService } from './g-utility-spec.helper';
 
 export class MockGCookieService extends GCookieService {
     mockCookies = {};
